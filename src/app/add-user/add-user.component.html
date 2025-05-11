@@ -1,0 +1,8 @@
+
+<div class="add-user-form-container">
+    <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="enter name..." formControlName="name"> <br>
+        <input type="number" placeholder="enter age..." formControlName="age"> <br>
+        <button type="submit">Add user</button>
+    </form>
+</div>

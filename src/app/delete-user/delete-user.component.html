@@ -1,0 +1,5 @@
+<ul>
+    @for (user of usersList; track user.name) {
+        <li>{{user.name}} - {{user.age}} - <button (click)="deleteUser(user)">Delete</button></li>
+    }
+</ul>
