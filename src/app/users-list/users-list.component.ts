@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { allUsersStore } from '../store/selectors/users.selector';
+import { adultUsers, allUsersStore } from '../store/selectors/users.selector';
 import { UserInterface } from '../constant';
 
 @Component({
@@ -16,6 +16,12 @@ export class UsersListComponent implements OnInit{
   ngOnInit(): void {
     this._store.select(allUsersStore).subscribe((data: unknown) => {
       this.usersList = <UserInterface[]>data;
+    })
+  }
+
+  getAdultAge() {
+    this._store.select(adultUsers).subscribe((data) => {
+      this.usersList = data;
     })
   }
 

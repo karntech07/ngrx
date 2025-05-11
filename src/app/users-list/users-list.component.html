@@ -1,3 +1,5 @@
+<button (click)="getAdultAge()">Adult User (over age 18)</button>
+
 <ul>
     @for (user of usersList; track user.name) {
         <li>{{user.name}} - {{user.age}}</li>
